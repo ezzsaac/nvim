@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
 
 vim.keymap.set("n", "<C-s>", "<cmd>noautocmd w <CR>", opts)
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
+vim.keymap.set("n", "<space>d", "<cmd> close <CR>", opts)
 
 vim.keymap.set("n", "<Up>", ":resize -2<CR>", opts)
 vim.keymap.set("n", "<Down>", ":resize +2<CR>", opts)
@@ -28,3 +29,10 @@ vim.keymap.set("i", "<Up>", "<Nop>", opts)
 vim.keymap.set("i", "<Down>", "<Nop>", opts)
 vim.keymap.set("i", "<Left>", "<Nop>", opts)
 vim.keymap.set("i", "<Right>", "<Nop>", opts)
+
+vim.keymap.set("n", "<space>st", function()
+	vim.cmd.vnew()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 5)
+end)

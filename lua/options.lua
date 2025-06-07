@@ -1,5 +1,5 @@
 vim.wo.number = true
-vim.cmd.colorscheme("retrobox")
+--vim.cmd.colorscheme("retrobox")
 vim.o.clipboard = "unnamedplus"
 vim.o.wrap = false
 vim.o.linebreak = true
